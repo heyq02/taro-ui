@@ -1,0 +1,23 @@
+.github/workflows/rn-release.yml
+  s_5a3ffcaad7b5aa::t_7653b3fa953448 47-48,53,55,61,63
+examples/demo-rn/metro.config.js
+  s_5a3ffcaad7b5aa::t_76b7d7e11aa5ad 95-100
+examples/demo-rn/rn-babel-transformer.js
+  s_5a3ffcaad7b5aa::t_759337508ef5bc 1-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "3fee4947f115666f784193fae4021a3706a12703",
+  "prompts": {},
+  "sessions": {
+    "s_5a3ffcaad7b5aa": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b31d9f7e-91ed-4008-88a6-1cf68cf0b328",
+        "model": "unknown"
+      },
+      "human_author": "heyongqi10 <heyongqi10@jd.com>"
+    }
+  }
+}
