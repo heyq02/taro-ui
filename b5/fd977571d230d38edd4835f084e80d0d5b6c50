@@ -1,0 +1,19 @@
+.github/workflows/rn-release.yml
+  s_38d159e39054d9::t_971c92ec2a9c38 96-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "b5fd977571d230d38edd4835f084e80d0d5b6c50",
+  "prompts": {},
+  "sessions": {
+    "s_38d159e39054d9": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fb61a0d6-949a-485b-b01e-48886bf2268c",
+        "model": "unknown"
+      },
+      "human_author": "heyongqi10 <heyongqi10@jd.com>"
+    }
+  }
+}
