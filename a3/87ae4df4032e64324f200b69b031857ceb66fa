@@ -1,0 +1,23 @@
+.github/workflows/rn-release.yml
+  s_5a3ffcaad7b5aa::t_92f5d86601daf1 46-48,53,60,65
+examples/demo-rn/config/index.js
+  s_5a3ffcaad7b5aa::t_92c150541fc878 75
+examples/demo-rn/metro.config.js
+  s_5a3ffcaad7b5aa::t_59eca4b7c55631 8-9,16,21-22,47-49,52-56,66-92,102-110,112-113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "a387ae4df4032e64324f200b69b031857ceb66fa",
+  "prompts": {},
+  "sessions": {
+    "s_5a3ffcaad7b5aa": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b31d9f7e-91ed-4008-88a6-1cf68cf0b328",
+        "model": "unknown"
+      },
+      "human_author": "heyongqi10 <heyongqi10@jd.com>"
+    }
+  }
+}
