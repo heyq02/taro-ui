@@ -115,7 +115,8 @@
 2. **Taro v4 多端**：`demo-v4` 补支付宝、字节、京东、QQ 的编译验证。通过之前 `peerDependencies` 保持 `>=3`。
    - **2026-11-02 进度**：weapp / alipay / swan / tt / jd / qq 六端编译验证已全部通过，与 Taro 3.6.40 基线逐端对等（产物结构一致、均含 taro-ui 组件代码）。quickapp 在 v3 与 v4 下均不可用（上游 `@tarojs/plugin-platform-quickapp` 已从 npm 下架），属脚本遗留，不计入。
    - H5 端已在 `examples/demo-v4/config/index.js` 修复两个阻塞问题：`__TARO_FRAMEWORK__` 崩溃（alias `plugin-framework-react`）与 `createSelectorQuery`/`getSystemInfo is not a function`（把 `packages/taro-ui/dist` 加进 script 规则 include）。54 个路由逐个冒烟，与 v3 基线零差异。
-   - 已知 H5 遗留：`AtMessage` 在包入口（`dist/index.esm.js`）下报 `TaroN is not defined`，v3 同样存在，非 v4 回归，详见下方「Taro v4 兼容性策略」。
+   - 已知 H5 遗留：~~`AtMessage` 在包入口（`dist/index.esm.js`）下报 `TaroN is not defined`~~ —— 已于同日修复，见下条。
+   - **H5 `TaroN is not defined` 已修复**：根因是 `babel-plugin-transform-taroapi` 在 `Program.exit` 里只保留第一条 `@tarojs/taro` import 声明、其余 `remove()`，而引用重命名按模块作用域做；taro-ui 的 ESM 入口原本是打包成单个文件、内含 12 条 taro 导入，于是出现「保留 `Taro11`、代码里还在用 `Taro9`」。改为由 `config/build-esm-entry.mjs` 生成**非打包的 re-export barrel** 作为 `dist/index.esm.js`，webpack 逐文件交给 babel，每个文件只有一条 taro 导入，问题消失。CJS 入口（`dist/index.js`）仍为打包产物，未受影响。
 3. **仓库分流**：按 `docs/MAINTENANCE.md` 处理打开的历史 issue。
 4. **更后面**：去掉 `propTypes`；暗色主题 / CSS Variables（[#1873](https://github.com/jd-opensource/taro-ui/issues/1873)）；骨架屏、水印。国际化已在 3.4.0 落地，不再作为 4.0.0 的前提。
 

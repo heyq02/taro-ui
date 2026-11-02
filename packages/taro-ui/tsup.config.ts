@@ -9,19 +9,18 @@ const shared = {
 }
 
 export default defineConfig([
-  // 1. Bundle：CJS + ESM 打包产物，兼容旧版路径
+  // 1. Bundle：CJS 打包产物，兼容旧版 require 路径
   {
     ...shared,
     entry: { index: 'src/index.ts' },
-    format: ['cjs', 'esm'],
-    outExtension({ format }) {
-      return { js: format === 'esm' ? '.esm.js' : '.js' }
-    },
+    format: ['cjs'],
     bundle: true,
     dts: false,
     clean: true
   },
   // 2. 非打包逐文件产物：支持按需引入 tree-shaking
+  //    ESM 入口（dist/index.esm.js）随后由 config/build-esm-entry.mjs 生成为
+  //    re-export barrel，原因见该脚本头部注释。
   {
     ...shared,
     entry: ['src/**/*.ts', 'src/**/*.tsx', '!src/index.ts'],
