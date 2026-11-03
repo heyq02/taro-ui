@@ -293,9 +293,11 @@ export default class PanelBasic extends React.Component<
   }
 
   public componentDidMount(): void {
-    const { id } = Taro.Current.router.params
+    // 直接打开 /pages/panel/index（不带 ?id=）时 router.params 可能是空对象，
+    // 原写法 id.toLowerCase() 会抛 TypeError 导致白屏，这里兜底为空串。
+    const { id } = (Taro.Current.router && Taro.Current.router.params) || {}
     this.setState({
-      currentId: id.toLowerCase() || ''
+      currentId: id ? String(id).toLowerCase() : ''
     })
   }
 
@@ -329,6 +331,11 @@ export default class PanelBasic extends React.Component<
         {/* S Body */}
         <View className='panel-body'>
           <View className='component-list'>
+            {itemList.length === 0 && (
+              <View className='component-list__empty'>
+                <Text>该分类不存在，请从首页进入</Text>
+              </View>
+            )}
             {itemList.map(item => (
               <View
                 className='component-list__item'
