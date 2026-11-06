@@ -1,0 +1,35 @@
+packages/taro-ui/src/components/checkbox/index.tsx
+  s_468ce68e291a78::t_abc2eabbedf39d 8,14-15,42-43
+packages/taro-ui/src/components/loading/index.tsx
+  s_468ce68e291a78::t_98e2b39e915211 5
+packages/taro-ui/src/components/radio/index.tsx
+  s_468ce68e291a78::t_e234eb065f0804 9,12,15-16,25-26
+packages/taro-ui/test/types/entry-exports.test.js
+  s_468ce68e291a78::t_b31b8e74306883 1-65
+packages/taro-ui/types/checkbox.d.ts
+  s_468ce68e291a78::t_ba826fcace2ccf 25
+packages/taro-ui/types/component.d.ts
+  s_468ce68e291a78::t_e661d08dc69c1e 1-11
+packages/taro-ui/types/index.d.ts
+  s_468ce68e291a78::t_ddc6ed676e1254 45,52-55,57-61,68-70
+packages/taro-ui/types/loading.d.ts
+  s_468ce68e291a78::t_9fb90b82bf62f6 3-13,16,18
+packages/taro-ui/types/radio.d.ts
+  s_468ce68e291a78::t_d38cae8c239e87 44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "e2b53d9c50ac9a73dfc9b82b65d658501d7d5333",
+  "prompts": {},
+  "sessions": {
+    "s_468ce68e291a78": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "ba3b4366-49b5-44f0-9558-af04e12abf1d",
+        "model": "unknown"
+      },
+      "human_author": "heyongqi10 <heyongqi10@jd.com>"
+    }
+  }
+}
