@@ -1,0 +1,25 @@
+packages/taro-ui/test/types/entry-exports.test.js
+  s_b673808a330407::t_70c4b4d7bf565e 6-14,27-29,31-36,59-83,90,107-193
+  s_b673808a330407::t_81c516fc457d2a 194-196
+  s_b673808a330407::t_73d4eeaf24a50c 197-199
+packages/taro-ui/types/modal.d.ts
+  s_b673808a330407::t_c7c7ea3e2c7aed 54-58
+packages/taro-ui/rn/index.ts
+  s_b673808a330407::t_8c703896732780 53-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "1686f90ad97ba662ee04ceabd885804ebdfee8ec",
+  "prompts": {},
+  "sessions": {
+    "s_b673808a330407": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "df412455-08d2-4e3c-b306-873a8222711d",
+        "model": "default"
+      },
+      "human_author": "heyongqi10 <heyongqi10@jd.com>"
+    }
+  }
+}
